@@ -16,7 +16,7 @@ public class SwordController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.rotation = Quaternion.Euler(0, 0, 90 * dray.facing);                          //	c	
+        transform.rotation = Quaternion.Euler(0, 0, 90 * dray.facing);	
         sword.SetActive(dray.mode == Dray.eMode.attack);
     }
 }

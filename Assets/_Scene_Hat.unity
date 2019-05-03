@@ -319,21 +319,36 @@ MonoBehaviour:
   defaultTileNum: 29
   tileSwaps:
   - tileNum: 192
-    swapPrefab: {fileID: 855641886}
+    swapPrefab: {fileID: 1882090987922020, guid: 8d533cb7952f0fb42834bf7e768c7b0a,
+      type: 2}
     guaranteedItemDrop: {fileID: 0}
     overrideTileNum: -1
   - tileNum: 224
-    swapPrefab: {fileID: 2110478548}
+    swapPrefab: {fileID: 1786421966097350, guid: bdc52bec563e0cc40bee7654e182e567,
+      type: 2}
     guaranteedItemDrop: {fileID: 0}
     overrideTileNum: -1
   - tileNum: 232
-    swapPrefab: {fileID: 2110478548}
-    guaranteedItemDrop: {fileID: 855641886}
+    swapPrefab: {fileID: 1786421966097350, guid: bdc52bec563e0cc40bee7654e182e567,
+      type: 2}
+    guaranteedItemDrop: {fileID: 1882090987922020, guid: 8d533cb7952f0fb42834bf7e768c7b0a,
+      type: 2}
     overrideTileNum: -1
   - tileNum: 193
-    swapPrefab: {fileID: 1370490204}
+    swapPrefab: {fileID: 1000011084335560, guid: c0a773a79706a44f19d02f6f29101480,
+      type: 2}
     guaranteedItemDrop: {fileID: 0}
     overrideTileNum: -1
+  - tileNum: 227
+    swapPrefab: {fileID: 1000010950105738, guid: 002d3cd572dd2425c9aeacc3340afccb,
+      type: 2}
+    guaranteedItemDrop: {fileID: 0}
+    overrideTileNum: -1
+  - tileNum: 228
+    swapPrefab: {fileID: 1000010950105738, guid: 002d3cd572dd2425c9aeacc3340afccb,
+      type: 2}
+    guaranteedItemDrop: {fileID: 0}
+    overrideTileNum: 96
 --- !u!114 &534669907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,11 +811,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f130f70ed2d64446b43973538bd7dee, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &855641886 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1882090987922020, guid: 8d533cb7952f0fb42834bf7e768c7b0a,
-    type: 2}
-  m_PrefabInternal: {fileID: 905335691}
 --- !u!1001 &905335691
 Prefab:
   m_ObjectHideFlags: 0
@@ -1122,11 +1132,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0a773a79706a44f19d02f6f29101480, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1370490204 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000011084335560, guid: c0a773a79706a44f19d02f6f29101480,
-    type: 2}
-  m_PrefabInternal: {fileID: 1370490203}
 --- !u!1 &1542741111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,11 +1438,6 @@ MonoBehaviour:
   mode: 0
   grappleTiles: 
   unsafeTiles: 
---- !u!1 &2110478548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1786421966097350, guid: bdc52bec563e0cc40bee7654e182e567,
-    type: 2}
-  m_PrefabInternal: {fileID: 2125102864}
 --- !u!1001 &2125102864
 Prefab:
   m_ObjectHideFlags: 0

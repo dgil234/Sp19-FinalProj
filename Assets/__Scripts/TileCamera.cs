@@ -20,12 +20,11 @@ public class TileCamera : MonoBehaviour {
     static public Tile[,] TILES;
     static public string COLLISIONS;
 
-    [Header("Set	in	Inspector")]
+    [Header("Set in	Inspector")]
     public TextAsset mapData;
     public Texture2D mapTiles;
     public TextAsset mapCollisions; 
     public Tile tilePrefab;
-
     public int defaultTileNum;
     public List<TileSwap> tileSwaps;
 
@@ -36,8 +35,8 @@ public class TileCamera : MonoBehaviour {
     {
         COLLISIONS = Utils.RemoveLineEndings(mapCollisions.text);
         PrepareTileSwapDict();
-        enemyAnchor = (new GameObject("Enemy	Anchor")).transform;
-        itemAnchor = (new GameObject("Item	Anchor")).transform;
+        enemyAnchor = (new GameObject("Enemy Anchor")).transform;
+        itemAnchor = (new GameObject("Item Anchor")).transform;
         LoadMap();
     }
 
@@ -73,8 +72,8 @@ public class TileCamera : MonoBehaviour {
                 CheckTileSwaps(i, j);
             }
         }
-        print("Parsed	" + SPRITES.Length + "sprites.");
-        print("Map	size:	" + W + "wide	by	" + H + "high");
+        print("Parsed" + SPRITES.Length + "sprites.");
+        print("Map size: " + W + "wide by " + H + "high"); 
 
         ShowMap();
     }
@@ -134,7 +133,6 @@ public class TileCamera : MonoBehaviour {
                 }
             }
         }
-        //	Replace	with	another	tile	
         if (ts.overrideTileNum == -1)
         { 
             SET_MAP(i, j, defaultTileNum);

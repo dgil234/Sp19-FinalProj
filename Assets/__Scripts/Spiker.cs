@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Spiker : MonoBehaviour {
-    /*
+public class Spiker : Enemy {
+    
         enum eMode { search, attack, retract };
 
         [Header("Set in Inspector")]
@@ -27,17 +27,14 @@ public class Spiker : MonoBehaviour {
             dEf = GetComponent<DamageEffect>();
         }
 
-        void Update () {
+        override protected void Update () {
             switch (mode) {
                 case eMode.search:
-                     Check whether Dray is in the same room
                     if (dray.roomNum != inRm.roomNum) return;
 
                     float moveAmt;
                     if ( Mathf.Abs( dray.roomPos.x - inRm.roomPos.x ) < sensorRange ) {
-                         Attack Vertically
                         moveAmt = ( InRoom.ROOM_H - (InRoom.WALL_T*2) )/2 - 1;//0.5f;
-                         The -0.5f above accounts for radius of Spiker
                         p1 = p0 = transform.position;
                         if (inRm.roomPos.y < InRoom.ROOM_H/2) {
                             p1.y += moveAmt; 
@@ -48,7 +45,6 @@ public class Spiker : MonoBehaviour {
                     }
 
                     if ( Mathf.Abs( dray.roomPos.y - inRm.roomPos.y ) < sensorRange ) {
-                         Attack Horizontally
                         moveAmt = ( InRoom.ROOM_W - (InRoom.WALL_T*2) )/2 - 1;//0.5f;
                         p1 = p0 = transform.position;
                         if (inRm.roomPos.x < InRoom.ROOM_W/2) {
@@ -71,16 +67,14 @@ public class Spiker : MonoBehaviour {
                     pos = transform.position;
                     delta = dir * attackSpeed * Time.fixedDeltaTime;
                     if (delta.magnitude > (p1-pos).magnitude) {
-                         We're close enough to switch directions
                         transform.position = p1;
                         mode = eMode.retract;
                         break;
                     }
                     transform.position = pos + delta;
 
-                     Test for collision with Dray
                     if ( (dray.transform.position - transform.position).magnitude < radius + drayColld.radius ) {
-                        dray.TakeDamage(dEf, transform.position);
+                        //dray.TakeDamage(dEf, transform.position);
                     }
                     break;
 
@@ -89,7 +83,6 @@ public class Spiker : MonoBehaviour {
                     pos = transform.position;
                     delta = dir * retractSpeed * Time.fixedDeltaTime;
                     if (delta.magnitude > (p0-pos).magnitude) {
-                         We're close enough to switch directions
                         transform.position = p0;
                         mode = eMode.search;
                         break;
@@ -99,5 +92,4 @@ public class Spiker : MonoBehaviour {
 
             }
         }
-    */
 }

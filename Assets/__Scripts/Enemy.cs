@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-    protected static Vector3[] directions = new Vector3[]   {
-								Vector3.right,  Vector3.up, Vector3.left,   Vector3.down    };
+    protected static Vector3[] directions = new Vector3[] {Vector3.right, Vector3.up, Vector3.left, Vector3.down};
 
-    [Header("Set	in	Inspector:	Enemy")]
+    [Header("Set in	Inspector: Enemy")]
     public float maxHealth = 1;
     public float knockbackSpeed = 10;
     public float knockbackDuration = 0.25f;
@@ -15,7 +14,7 @@ public class Enemy : MonoBehaviour {
     public GameObject[] randomItemDrops;
     public GameObject guaranteedItemDrop = null;
 
-    [Header("Set	Dynamically:	Enemy")]
+    [Header("Set Dynamically: Enemy")]
     public float health;
     public bool invincible = false;
     public bool knockback = false;

@@ -5,14 +5,14 @@ using UnityEngine;
 public class Grapple : MonoBehaviour {
     public enum eMode { none, gOut, gInMiss, gInHit }
 
-    [Header("Set	in	Inspector")]
+    [Header("Set in	Inspector")]
     public float grappleSpd = 10;
     public float grappleLength = 7;
     public float grappleInLength = 0.5f;
     public int unsafeTileHealthPenalty = 2;
     public TextAsset mapGrappleable;
 
-    [Header("Set	Dynamically")]
+    [Header("Set Dynamically")]
     public eMode mode = eMode.none;
     public List<int> grappleTiles; 
     public List<int> unsafeTiles;
@@ -28,8 +28,7 @@ public class Grapple : MonoBehaviour {
     private Vector3 p0, p1;
     private int facing;
 
-    private Vector3[] directions = new Vector3[]   {
-                                Vector3.right,  Vector3.up, Vector3.left,   Vector3.down    };
+    private Vector3[] directions = new Vector3[]   {Vector3.right,  Vector3.up, Vector3.left,   Vector3.down    };
 
     void Awake()
     {

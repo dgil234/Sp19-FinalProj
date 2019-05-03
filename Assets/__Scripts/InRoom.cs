@@ -19,7 +19,7 @@ public class InRoom : MonoBehaviour {
         new Vector2(7.5f, 1)
     };
 
-    [Header("Set	in	Inspector")]
+    [Header("Set in	Inspector")]
     public bool keepInRoom = true;
     public float gridMult = 1;
 

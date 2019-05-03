@@ -22,6 +22,9 @@ GameObject:
   - component: {fileID: 212000013552399512}
   - component: {fileID: 135000012625933370}
   - component: {fileID: 54000013947594838}
+  - component: {fileID: 114381208600684780}
+  - component: {fileID: 114161351018387522}
+  - component: {fileID: 114295699577668066}
   m_Layer: 11
   m_Name: Spiker
   m_TagString: Untagged
@@ -57,6 +60,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &114161351018387522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010950105738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d19e68917835524e9c1ac7ec9070348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keepInRoom: 1
+  gridMult: 1
+--- !u!114 &114295699577668066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010950105738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ef44b3db6d2bd40b37f2a0bb8cedd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  knockback: 1
+--- !u!114 &114381208600684780
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010950105738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f596252f87e344ab9b1b23d9a9e7bff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  knockbackSpeed: 10
+  knockbackDuration: 0.25
+  invincibleDuration: 0.5
+  randomItemDrops: []
+  guaranteedItemDrop: {fileID: 0}
+  health: 0
+  invincible: 0
+  knockback: 0
+  sensorRange: 0.75
+  attackSpeed: 6
+  retractSpeed: 3
+  radius: 0.4
 --- !u!135 &135000012625933370
 SphereCollider:
   m_ObjectHideFlags: 1

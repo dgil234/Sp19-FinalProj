@@ -6,7 +6,7 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
 
     public enum eMode { idle, move, attack, transition, knockback }
 
-    [Header("Set	in	Inspector")]
+    [Header("Set in	Inspector")]
     public float speed = 5;
     public float attackDuration = 0.25f;
     public float attackDelay = 0.5f;
@@ -16,7 +16,7 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
     public float knockbackDuration = 0.25f;
     public float invincibleDuration = 0.5f;
 
-    [Header("Set	Dynamically")]
+    [Header("Set Dynamically")]
     public int dirHeld = -1;
     public int facing = 1;
     public eMode mode = eMode.idle;
@@ -52,7 +52,9 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
         Vector3.right,  Vector3.up, Vector3.left,   Vector3.down
     };
 
-    private KeyCode[] keys = new KeyCode[]   { KeyCode.RightArrow, KeyCode.UpArrow,    KeyCode.LeftArrow,  KeyCode.DownArrow   };
+    private KeyCode[] keys = new KeyCode[] {
+        KeyCode.RightArrow, KeyCode.UpArrow, KeyCode.LeftArrow, KeyCode.DownArrow
+    };
 
     void Awake()
     {
@@ -176,7 +178,7 @@ public class Dray : MonoBehaviour, IFacingMover, IKeyMaster {
                 roomNum = rm;
                 transitionPos = InRoom.DOORS[(doorNum + 2) % 4];
                 roomPos = transitionPos;
-                lastSafeLoc = transform.position;                                                                                                               //	b	
+                lastSafeLoc = transform.position;
                 lastSafeFacing = facing;
                 mode = eMode.transition;
                 transitionDone = Time.time + transitionDelay;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour {
 
-    [Header("Set	Dynamically")]
+    [Header("Set Dynamically")]
     public int x;
     public int y;
     public int tileNum;
